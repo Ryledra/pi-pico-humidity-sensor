@@ -7,7 +7,7 @@ const uint LED_PIN = 25;
 
 int main()  {
 
-    bi_decl(bi_program_description("This is a test binary."));
+    bi_decl(bi_program_description("This is a test binary - again."));
     bi_decl(bi_1pin_with_name(LED_PIN, "On-board LED"));
 
     stdio_init_all();
