@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-include(pico_sdk_init.cmake)
+include(../../pico-sdk/pico_sdk_init.cmake)
 
 
 project(project1
@@ -23,13 +23,13 @@ pico_sdk_init()
 
 
 add_executable(main
-    main.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../src/main.cpp
 )
 
 target_sources(main
     PUBLIC
-        ${CMAKE_CURRENT_LIST_DIR}/../lib/sd1306/SSD1306.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/../lib/sd1306/GFX.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/../lib/ssd1306/SSD1306.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/../lib/ssd1306/GFX.cpp
 )
 
 target_include_directories(main

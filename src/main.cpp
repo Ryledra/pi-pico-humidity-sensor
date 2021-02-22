@@ -2,8 +2,8 @@
 #include <stdint.h>
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
-#include "../logo.hpp" // TODO: check whether location needs to be adjusted
-#include "../GFX.hpp" // TODO: check whether location needs to be adjusted
+#include "../lib/ssd1306/logo.hpp" // TODO: check whether location needs to be adjusted
+#include "../lib/ssd1306/GFX.hpp" // TODO: check whether location needs to be adjusted
 
 int main() {
 
@@ -23,9 +23,9 @@ int main() {
     {
         sleep_ms(1000);
         oled.clear();                       //Clear buffer
-        oled.drawString(0, 0, "Raspberry Pico");
-        oled.drawString(0, 10, "Oled Example");
-        oled.drawString(0, 20, "Have fun!");
+        oled.drawString_str(0, 0, "Raspberry Pico");
+        oled.drawString_str(0, 10, "Oled Example");
+        oled.drawString_str(0, 20, "Have fun!");
         oled.drawProgressBar(0, oled.getHeight()-10, oled.getWidth(), 10, rand() % 100 + 1);
         oled.display();                     //Send buffer to the screen
     }

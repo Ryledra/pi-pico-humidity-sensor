@@ -37,7 +37,7 @@ void GFX::drawString(int x, int y, char* str, colors color)
 }
 
 
-void GFX::drawString(int x, int y, std::string str, colors color)
+void GFX::drawString_str(int x, int y, std::string str, colors color)
 {
 	int x_tmp = x;
 

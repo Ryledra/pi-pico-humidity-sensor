@@ -20,7 +20,7 @@ class GFX : public SSD1306 {
         GFX(uint16_t const DevAddr, uint8_t const width, uint8_t const height, i2c_inst_t * i2c);
 
         void drawChar(int x, int y, char chr, colors color = colors::WHITE);
-        void drawString(int x, int y, std::string str, colors color = colors::WHITE);
+        void drawString_str(int x, int y, std::string str, colors color = colors::WHITE);
         void drawString(int x, int y, char* str, colors color = colors::WHITE);
 
         void drawProgressBar(int x, int y, uint16_t w, uint16_t h, uint8_t progress, colors color = colors::WHITE);
